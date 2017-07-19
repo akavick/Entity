@@ -69,5 +69,15 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cities.txt" />
+    <Content Include="FirstNamesMan.txt" />
+    <Content Include="FirstNamesWoman.txt" />
+    <Content Include="LastNamesMan.txt" />
+    <Content Include="LastNamesWoman.txt" />
+    <Content Include="Products.txt" />
+    <Content Include="SecondNamesMan.txt" />
+    <Content Include="SecondNamesWoman.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
