@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace EfCoreBdFirst
 {
-    public partial class Persons
+    public partial class Person
     {
         public int Id { get; set; }
         public string FirstName { get; set; }

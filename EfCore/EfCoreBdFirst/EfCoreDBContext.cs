@@ -6,7 +6,8 @@ namespace EfCoreBdFirst
 {
     public partial class EfCoreDBContext : DbContext
     {
-        public virtual DbSet<Persons> Persons { get; set; }
+
+        public virtual DbSet<Person> Persons { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -21,9 +22,11 @@ namespace EfCoreBdFirst
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Persons>(entity =>
+            modelBuilder.Entity<Person>(entity =>
             {
-                entity.Property(e => e.Sex).HasDefaultValueSql("((0))");
+                entity.ToTable("Persons")
+                      .Property(e => e.Sex).HasDefaultValueSql("((0))");
+                entity.Property(e => e.Id).Metadata.IsPrimaryKey();
             });
         }
     }

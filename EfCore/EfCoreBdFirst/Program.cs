@@ -6,7 +6,13 @@ namespace EfCoreBdFirst
     {
         static void Main(string[] args)
         {
-            
+            using (var context = new EfCoreDBContext())
+            {
+                foreach (var person in context.Persons)
+                {
+                    Console.WriteLine(person.Id);
+                }
+            }
         }
     }
 }
